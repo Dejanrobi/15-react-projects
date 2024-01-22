@@ -5,13 +5,14 @@ import Article from './Article';
 // storing the theme in the local-storage.
 const getStorageTheme = () => {
   // default theme is the light-theme
-  let theme = 'light-theme';
-  // checking the local storage and seeing if there is a presence of a theme, then we set the theme to the value of the theme in the local storage
+  let theme;
+  // checking the local storage and seeing if there is a presence of a theme, then we set the theme to the value of 
+  // the theme in the local storage.
   // and return the value of the theme.
   if (localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
+    return theme = localStorage.getItem('theme');
   }
-  return theme;
+  return theme= 'light-theme';
 };
 
 function App() {

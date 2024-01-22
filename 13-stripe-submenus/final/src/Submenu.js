@@ -15,6 +15,9 @@ const Submenu = () => {
     const submenu = container.current
     const { center, bottom } = location
     // setting the position of the submenu
+    // the position of the submenu is absolute so its anywhere in the page, hence we set it according to the  center location of the menu.
+    //the left position of the submenu will be at this center, i.e its left part will start at the center hence the submenu will not have been centered properly.
+    // we then translate the submenu  in css to -50% in order to correctly center it.
     submenu.style.left = `${center}px`
     submenu.style.top = `${bottom}px`
     console.log(links)

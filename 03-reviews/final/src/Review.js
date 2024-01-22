@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import people from './data';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 const Review = () => {
+  // we get the person to display using the index
   const [index, setIndex] = useState(0);
   const { name, job, image, text } = people[index];
+  
+  // check number function
   const checkNumber = (number) => {
     if (number > people.length - 1) {
       return 0;
@@ -13,18 +16,26 @@ const Review = () => {
     }
     return number;
   };
+
+
+  // setting the nextPerson
   const nextPerson = () => {
     setIndex((index) => {
       let newIndex = index + 1;
+      // first checkNumber then return it to set the index
       return checkNumber(newIndex);
     });
   };
+
+
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
       return checkNumber(newIndex);
     });
   };
+
+  
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * people.length);
     if (randomNumber === index) {

@@ -9,6 +9,7 @@ function App() {
   const [followers, setFollowers] = useState([])
 
   useEffect(() => {
+    // returns if its still loading and waits when loading changes then sets followers when loading is false
     if (loading) return
     // the first array in the data is set as the the followers in that first page
     setFollowers(data[page])
@@ -67,7 +68,7 @@ function App() {
                   className={`page-btn ${index === page ? 'active-btn' : null}`}
                   onClick={() => handlePage(index)}
                 >
-                  {/* setting the displayed page number because index starts with a 0 */}
+                  {/* setting the displayed page number because index starts with a 0 hence we add 1 to give an accurate number */}
                   {index + 1}
                 </button>
               )

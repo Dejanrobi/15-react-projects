@@ -26,10 +26,13 @@ function App() {
       console.log(error)
     }
   }
+  // running the fetchTours function.
+  // runs only when the page render
   useEffect(() => {
     fetchTours()
   }, [])
   
+  // Multiple returns
   if (loading) {
     return (
       <main>

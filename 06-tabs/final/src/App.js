@@ -15,6 +15,8 @@ function App() {
     setJobs(newJobs)
     setLoading(false)
   }
+
+  // used to run the fetchJobs function every time the web app renders
   useEffect(() => {
     fetchJobs()
   }, [])

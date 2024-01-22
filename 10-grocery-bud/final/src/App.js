@@ -3,6 +3,8 @@ import List from './List';
 import Alert from './Alert';
 
 // Storing the items in the localStorage so that when you reload they are still present
+
+// Getting items from the local storage
 const getLocalStorage = () => {
   let list = localStorage.getItem('list');
   if (list) {
@@ -26,6 +28,7 @@ function App() {
     if (!name) {
       showAlert(true, 'danger', 'please enter a value');
     } else if (name && isEditing) {
+      // setting the list to a new list with the edited item
       setList(
         list.map((item) => {
           if (item.id === editID) {
@@ -44,7 +47,7 @@ function App() {
       showAlert(true, 'success', 'item added to the list');
       const newItem = { id: new Date().getTime().toString(), title: name };
 
-      // destructure the list array, add a new item and create a new array then set it the List
+      // spread the list array, add a new item and then set the list to the new list.
       setList([...list, newItem]);
       setName('');
     }

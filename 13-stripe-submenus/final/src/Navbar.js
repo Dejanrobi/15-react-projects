@@ -9,10 +9,11 @@ const Navbar = () => {
     const page = e.target.textContent;
 
     const tempBtn = e.target.getBoundingClientRect();
-    // this gets the center coordinate of the menu item
+    // getting the center coordinate of the menu item in order to position the submenu
     const center = (tempBtn.left + tempBtn.right) / 2;
     // gets the bottom coordinate of the btn and minuses by 3 to bring the submenu near.
     const bottom = tempBtn.bottom - 3;
+
     openSubmenu(page, { center, bottom });
   };
 

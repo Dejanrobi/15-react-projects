@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 // Creating a context to be used throughout the entire page.
 const AppContext = React.createContext();
 
+// passing all the children to access the context.
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,4 +44,5 @@ export const useGlobalContext = () => {
   return useContext(AppContext);
 };
 
+// exporting the AppProvider in order to pass the children that will access the context.
 export { AppContext, AppProvider };

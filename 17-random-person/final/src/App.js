@@ -11,7 +11,7 @@ import {
 // when data is fetched  from this api, it returns a random user.
 // Hence these details are displayed.
 const url = 'https://randomuser.me/api/'
-const defaultImage = 'https://randomuser.me/api/portraits/men/75.jpg'
+const defaultImage = 'https://randomuser.me/api/portraits/men/75.jpg' 
 function App() {
   const [loading, setLoading] = useState(true)
   const [person, setPerson] = useState(null)
@@ -52,9 +52,12 @@ function App() {
     setValue(newPerson.name)
   }
 
+  
   useEffect(() => {
     getPerson()
   }, [])
+
+
   const handleValue = (e) => {
     if (e.target.classList.contains('icon')) {
       const newValue = e.target.dataset.label

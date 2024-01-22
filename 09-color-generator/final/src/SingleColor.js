@@ -9,7 +9,7 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const hexValue = `#${hexColor}`
   // console.log("hexValue: ", hexValue);
 
-  // When alert changes, this useEffect runs and starts the timeout to remove the display of the alert
+  // When alert changes, this useEffect runs and starts the tiddddddddddddddddddddddddddddddddddddddddddmeout to remove the display of the alert
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAlert(false)

@@ -90,9 +90,10 @@ const AppProvider = ({ children }) => {
 }
 // make sure use
 
-// exporting the AppContext as a function that runs when the function is calld
+// exporting the AppContext as a function that runs when the function is called
 export const useGlobalContext = () => {
   return useContext(AppContext)
 }
 
+// exporting the App Provider to pass in the children.
 export { AppContext, AppProvider }
